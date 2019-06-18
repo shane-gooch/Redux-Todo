@@ -12,7 +12,7 @@ export const reducer = (state = initialState, action) => {
         case 'ADD_TODO': 
             return {
                 ...state,
-                todo: [action.payload]
+                todo: [...state.todo, action.payload]
             }
         default:
             return state;
